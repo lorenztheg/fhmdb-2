@@ -8,11 +8,24 @@ public class Movie {
     private final String title;
     private final String description;
     private final List<Genre> genres;
+    private final String id;
+    private final int releaseYear;
+    private final String imgUrl;
+    private final int lengthInMinutes;
+    private final List<String> directors = new ArrayList<>();
+    private final List<String> writers = new ArrayList<>();
+    private final List<String> mainCast = new ArrayList<>();
+    private final double rating;
 
     public Movie(String title, String description, List<Genre> genres) {
         this.title = title;
         this.description = description;
         this.genres = genres;
+        this.id = "";
+        this.releaseYear = 0;
+        this.imgUrl = "";
+        this.lengthInMinutes = 0;
+        this.rating = 0.0;
     }
 
     @Override
@@ -65,5 +78,29 @@ public class Movie {
                 Arrays.asList(Genre.DRAMA, Genre.ROMANCE, Genre.BIOGRAPHY)));
 
         return movies;
+    }
+    public String getId() {
+        return id;
+    }
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+    public String getImgUrl() {
+        return imgUrl;
+    }
+    public int getLengthInMinutes() {
+        return lengthInMinutes;
+    }
+    public List<String> getDirectors() {
+        return directors;
+    }
+    public List<String> getWriters() {
+        return writers;
+    }
+    public List<String> getMainCast() {
+        return mainCast;
+    }
+    public double getRating() {
+        return rating;
     }
 }
