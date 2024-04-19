@@ -6,6 +6,8 @@ import at.ac.fhcampuswien.fhmdb.models.SortedState;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -215,7 +217,7 @@ class HomeControllerTest {
         homeController.initializeState();
 
         // when
-        homeController.applyAllFilters("", null);
+        homeController.applyAllFilters("", null, "2019", "9");
 
         // then
         assertEquals(homeController.allMovies, homeController.observableMovies);

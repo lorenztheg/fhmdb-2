@@ -10,6 +10,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import java.util.stream.Collectors;
 
+import static at.ac.fhcampuswien.fhmdb.HomeController.descriptionsList;
+import static at.ac.fhcampuswien.fhmdb.HomeController.titlesList;
+
 public class MovieCell extends ListCell<Movie> {
     private final Label title = new Label();
     private final Label detail = new Label();
@@ -54,7 +57,8 @@ public class MovieCell extends ListCell<Movie> {
             layout.spacingProperty().set(10);
             layout.alignmentProperty().set(javafx.geometry.Pos.CENTER_LEFT);
             setGraphic(layout);
+            titlesList.add(title);
+            descriptionsList.add(detail);
         }
     }
 }
-
